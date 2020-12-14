@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+>
+    <TextView
+            android:text="Welcome to Convertify $$ Converter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/welcome_txt"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="88dp"
+            app:layout_constraintHorizontal_bias="0.524" android:textSize="24sp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/amount_enter_dollar"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_txt" android:layout_marginTop="344dp"
+            android:hint="Enter the Money in $$" android:textSize="24sp" app:layout_constraintHorizontal_bias="0.128"
+    />
+    <Button
+            android:text="Get PKR Amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button_amount"
+            app:layout_constraintTop_toBottomOf="@+id/amount_enter_dollar"
+            android:layout_marginTop="36dp" app:layout_constraintStart_toStartOf="@+id/amount_enter_dollar"
+            android:layout_marginStart="120dp" android:onClick="get_amount"/>
+    <ImageView
+            android:layout_width="398dp"
+            android:layout_height="272dp" app:srcCompat="@drawable/img" android:id="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/amount_enter_dollar"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_txt" app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintVertical_bias="0.309"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
